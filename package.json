@@ -1,0 +1,33 @@
+{
+  "name": "interval",
+  "version": "0.0.1",
+  "description": "Crazy Number.prototype extension to work with time intervals.",
+  "main": "interval.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tarabyte/interval.git"
+  },
+  "keywords": [
+    "unsafe",
+    "intervals",
+    "date",
+    "Number.prototype"
+  ],
+  "author": "tarabyte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tarabyte/interval/issues"
+  },
+  "homepage": "https://github.com/Tarabyte/interval",
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-jshint": "^1.5.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-qunit": "^0.3.3",
+    "gulp-size": "^0.3.0"
+  }
+}
