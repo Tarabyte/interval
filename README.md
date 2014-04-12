@@ -1,7 +1,7 @@
 interval
 ========
 
-Crazy extension to Number.prototype that allows to work with time intervals.
+Crazy Number.prototype extension that allows to work with time intervals.
 
 ```javascript
 (5).seconds.later; //returns new Date 5 seconds from now
@@ -13,7 +13,7 @@ Crazy extension to Number.prototype that allows to work with time intervals.
 (1).second.repeat(callback); //run callback every second
 ```
 
-To avoid using bracets you can store a number in a variable
+To avoid using parentheses you can store a number in a variable:
 
 ```javascript
 var fifty = 50;
