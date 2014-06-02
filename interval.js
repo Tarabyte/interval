@@ -57,6 +57,12 @@
         return function(cb) {
             return setInterval(cb, delta);        
         };
+    })
+    ('valueOf', function() {
+        var delta = this[$value];
+        return function() {
+            return delta;    
+        };
     });    
     
     addProperty('millisecond', apiBuilder(multiplier))

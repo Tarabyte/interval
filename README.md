@@ -20,3 +20,9 @@ var fifty = 50;
 
 console.log(fifty.minutes.ago); //logs a Date fifty minutes ago
 ```
+
+If you want to get the raw value in milliseconds you can use unary plus or any other method calling `valueOf`
+
+```javascript
+console.log(+12.5.minutes); //750000
+```

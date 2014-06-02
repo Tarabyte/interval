@@ -24,18 +24,22 @@ test('number prototype extension', function(){
 
 test('api', function() {
     var num = 500,
-        date = new Date(1991, 1, 12, 10, 42, 15, 111);
+        date = new Date(1991, 1, 12, 10, 42, 15, 111),
+        isCloseTo = function(what, to, message) {
+            ok(Math.abs(what - to) < 10, message);    
+        }; 
 
     api.forEach(function(name) {
         var testing = num[name],
             delta = multipliers[name]*num;
 
-        equal(+testing.later, +new Date(+Date.now() + delta), name + '.later works');
+        isCloseTo(+testing.later, +new Date(+Date.now() + delta), name + '.later works');
 
-        equal(+testing.ago, +new Date(+Date.now() - delta), name + '.ago works');
+        isCloseTo(+testing.ago, +new Date(+Date.now() - delta), name + '.ago works');
 
-        equal(+testing.before(date), +new Date(+date - delta), name + '.before works');
-        equal(+testing.after(date), +new Date(+date + delta), name + '.after works');
+        isCloseTo(+testing.before(date), +new Date(+date - delta), name + '.before works');
+        isCloseTo(+testing.after(date), +new Date(+date + delta), name + '.after works');
+        equal(+testing, delta, 'should be convertible to number by unary plus');
 
     });
 
